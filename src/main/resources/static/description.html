@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Таксопарк</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row justify-content-between">
+            <div>
+                <h1 class="display-4">Таксопарк</h1>
+            </div>
+            <div class="mt-3 mr-3">
+                <a href="main.html" class="list-group-item list-group-item-action border-danger text-danger">Головна сторінка</a>
+            </div>
+        </div>
+
+        <p>
+
+        Сайт створюється для інформаційного обслуговування бази даних таксопарка. Він повинен містити дані різноманітні звіти, співробітників, клієнтів та транспорт.
+        Відповідно до предметної області система будується з врахуванням наступних особливостей:
+
+            <ul class="list-group my-3">
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">1</span>
+                    Клієнти, які зробили замовлення таксі більше ніж 10 разів на місяць, автоматично стають VIP клієнтами, і отримують знижку 10% на проїзд.
+                </li>
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">2</span>
+                    Для створення замовлення клієнт телефонує диспетчеру.
+                </li>
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">3</span>
+                    Для призначення замовлення диспетчер телефонує водію і говорить номер замовлення.
+                </li>
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">4</span>
+                    Протягом дня клієнт може запросити декілька замовлень.
+                </li>
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">5</span>
+                    Протягом дня диспетчер може обробити декілька замовлень.
+                </li>
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">6</span>
+                    Протягом дня водій може виконати декілька замовлень.
+                </li>
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">7</span>
+                    При виконанні різних замовлень водій може користуватися різними машинами.
+                </li>
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">8</span>
+                    Замовлення має лише одного власника (клієнта, який створив його).
+                </li>
+
+                <li class="list-group-item d-flex align-items-center">
+                    <span class="badge badge-danger badge-pill mr-3">9</span>
+                    Для виконання замовлення водій отримує машину та призначене замовлення.
+                </li>
+
+            </ul>
+
+        Після аналізу предметної області виділимо базові сутності цієї предметної області:
+
+        <ul class="list-group my-3">
+
+            <li class="list-group-item d-flex align-items-center">
+                <span class="badge badge-warning badge-pill mr-3">1</span>
+                Водії
+            </li>
+
+            <li class="list-group-item d-flex align-items-center">
+                <span class="badge badge-warning badge-pill mr-3">2</span>
+                Клієнти
+            </li>
+
+            <li class="list-group-item d-flex align-items-center">
+                <span class="badge badge-warning badge-pill mr-3">3</span>
+                Автомобілі
+            </li>
+
+            <li class="list-group-item d-flex align-items-center">
+                <span class="badge badge-warning badge-pill mr-3">4</span>
+                Замовлення
+            </li>
+
+            <li class="list-group-item d-flex align-items-center">
+                <span class="badge badge-warning badge-pill mr-3">5</span>
+                Диспетчери
+            </li>
+
+        </ul>
+
+        </p>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
