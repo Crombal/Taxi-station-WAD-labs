@@ -1,7 +1,7 @@
 <#include "security.ftlh">
 <#import "login.ftlh" as l>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
 
     <a class="navbar-brand" href="/">Таксопарк</a>
 
@@ -18,7 +18,7 @@
 
             <#if user?? && name!="Guest" && isDriver>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user-messages/${currentUserId}"><#if user?? && name!="Guest" && isDriver>Мої замовлення<#else>Мої замовлення</#if></a>
+                    <a class="nav-link" href="/user-messages/${currentUserId}"><#if user?? && name!="Guest" && isDriver>Мої замовлення<#else>Війти</#if></a>
                 </li>
             </#if>
 

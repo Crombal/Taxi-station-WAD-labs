@@ -1,5 +1,6 @@
 <#include "security.ftlh">
 <#macro login path isRegisterForm>
+
     <form action="${path}" method="post">
 
         <div class="form-group row">
@@ -44,10 +45,10 @@
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
 
         <#if !isRegisterForm>
-            <a class="btn btn-success" href="/registration">Реєстрація</a>
+            <a class="btn btn-outline-danger" href="/registration">Реєстрація</a>
         </#if>
 
-        <button type="submit" class="btn btn-primary"><#if isRegisterForm>Зареєструватися<#else>Війти</#if></button>
+        <button type="submit" class="btn btn-outline-danger"><#if isRegisterForm>Зареєструватися<#else>Війти</#if></button>
 
     </form>
 </#macro>
@@ -56,7 +57,7 @@
 
     <form action="/logout" method="post">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-        <button type="submit" class="btn btn-dark"><#if user??>Вийти<#else>Війти</#if></button>
+        <button type="submit" class="btn btn-danger"><#if user??>Вийти<#else>Війти</#if></button>
     </form>
 
 </#macro>

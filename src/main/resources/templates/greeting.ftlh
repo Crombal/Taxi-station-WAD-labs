@@ -1,7 +1,7 @@
 <#import "parts/common.ftlh" as c>
 
 <@c.page>
-    <div class="card border-danger bg-light" style="width: 100%;">
+    <div class="card border-danger" style="width: 100%;">
         <div class="card-body text-danger">
             <h5 class="card-title">Вас вітає наш таксопарк!</h5>
             <p class="card-text">Ви можете дізнатися детальну інформацію про водіїв, клієнтів та транспорт на нашому сайті.</p>
