@@ -1,56 +1,86 @@
 <#include "security.ftlh">
 <#macro login path isRegisterForm>
 
-    <form action="${path}" method="post">
+    <link rel="stylesheet" type="text/css" href="../static/css/sign_up.css"/>
 
-        <div class="form-group row">
-            <div class="col-sm-3">
+    <div class="container-main-form" id="container-main-form">
+        <div class="form-container sign-up-container">
+            <form class="reg-form" action="/registration" method="post">
+                <h1 class="reg-h1">Створити аккаунт</h1>
+                <span class="reg-span">Придумайте свій логін та пароль</span>
+
                 <input type="text" name="username" placeholder="Ім`я користувача"
                        value="<#if user??>${user.username}</#if>"
-                       class="form-control ${(usernameError??)?string('is-invalid', '')}"/>
+                       class="${(usernameError??)?string('is-invalid', '')}"/>
                 <#if usernameError??>
                     <div class="invalid-feedback">
                         ${usernameError}
                     </div>
                 </#if>
-            </div>
-        </div>
 
-        <div class="form-group row">
-            <div class="col-sm-3">
                 <input type="password" name="password" placeholder="Пароль"
-                       class="form-control ${(passwordError??)?string('is-invalid', '')}"/>
+                       class="${(passwordError??)?string('is-invalid', '')}"/>
                 <#if passwordError??>
                     <div class="invalid-feedback">
                         ${passwordError}
                     </div>
                 </#if>
-            </div>
-        </div>
 
-        <#if isRegisterForm>
-            <div class="form-group row">
-                <div class="col-sm-3">
-                    <input type="password" name="password2" placeholder="Повторіть пароль"
-                           class="form-control ${(password2Error??)?string('is-invalid', '')}"/>
-                    <#if password2Error??>
-                        <div class="invalid-feedback">
-                            ${password2Error}
-                        </div>
-                    </#if>
+                <input type="password" name="password2" placeholder="Повторіть пароль"
+                       class="${(password2Error??)?string('is-invalid', '')}"/>
+                <#if password2Error??>
+                    <div class="invalid-feedback">
+                        ${password2Error}
+                    </div>
+                </#if>
+
+                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                <button class="reg-button" type="submit">Зареєєструватися</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form class="reg-form" action="/login" method="post">
+                <h1 class="reg-h1">Ввійти</h1>
+                <span class="reg-span">Використовуйте свій аккаунт</span>
+
+                <input type="text" name="username" placeholder="Ім`я користувача"
+                       value="<#if user??>${user.username}</#if>"
+                       class="${(usernameError??)?string('is-invalid', '')}"/>
+                <#if usernameError??>
+                    <div class="invalid-feedback">
+                        ${usernameError}
+                    </div>
+                </#if>
+                <input type="password" name="password" placeholder="Пароль"
+                       class="${(passwordError??)?string('is-invalid', '')}"/>
+                <#if passwordError??>
+                    <div class="invalid-feedback">
+                        ${passwordError}
+                    </div>
+                </#if>
+
+                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                <button class="reg-button" type="submit">Ввійти</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="reg-h1-o">Вітаємо вас знову!</h1>
+                    <p class="reg-p">Щоб мати найновішу інформацію, ввійдіть у свій аккаунт</p>
+                    <button class="ghost" id="signIn">Ввійти</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="reg-h1-o">Вітаємо, Госте!</h1>
+                    <p class="reg-p">Введіть свої дані й починайте подорожувати разом з нами</p>
+                    <button class="ghost" id="signUp">Зареєєструватися</button>
                 </div>
             </div>
-        </#if>
+        </div>
+    </div>
 
-        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+    <script src="../static/js/sign_up.js"></script>
 
-        <#if !isRegisterForm>
-            <a class="btn btn-outline-danger" href="/registration">Реєстрація</a>
-        </#if>
-
-        <button type="submit" class="btn btn-outline-danger"><#if isRegisterForm>Зареєструватися<#else>Війти</#if></button>
-
-    </form>
 </#macro>
 
 <#macro logout>

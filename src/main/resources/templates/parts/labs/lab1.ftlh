@@ -1,4 +1,5 @@
 <#macro lab1>
+
     <div class="col-3">
         <div class="nav btn-group-vertical" id="l1-pills-tab" role="tablist" aria-orientation="vertical">
             <button type="button" class="btn btn-outline-danger" id="l1-desc-pills-tab" data-toggle="tab"
@@ -132,7 +133,6 @@
             </div>
         </div>
     </div>
-
 
 </#macro>
 
