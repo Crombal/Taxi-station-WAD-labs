@@ -16,21 +16,25 @@
                 <a class="nav-link" href="/main"><#if user?? && name!="Guest">Подорож<#else>Війти</#if></a>
             </li>
 
+            <#if user?? && name!="Guest">
+                <li class="nav-item">
+                    <a class="nav-link" href="/user-orders/${currentUserId}">Мої замовлення</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/profile">Мій профіль</a>
+                </li>
+            </#if>
+
             <#if user?? && name!="Guest" && isDriver>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user-messages/${currentUserId}"><#if user?? && name!="Guest" && isDriver>Мої замовлення<#else>Війти</#if></a>
+                    <a class="nav-link" href="/user-messages">Актуальні замовлення</a>
                 </li>
             </#if>
 
             <#if isAdmin>
                 <li class="nav-item">
                     <a class="nav-link" href="/user">Користувачі</a>
-                </li>
-            </#if>
-
-            <#if user?? && name!="Guest">
-                <li class="nav-item">
-                    <a class="nav-link" href="/user/profile">Мій профіль</a>
                 </li>
             </#if>
 

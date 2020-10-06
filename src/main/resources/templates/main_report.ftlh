@@ -35,7 +35,7 @@
         <div class="btn-group col" role="group">
             <button type="button" class="btn btn-outline-danger rounded-left" onclick="toggle_visibility('1');">Лабораторна робота №1</button>
             <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('2');">Лабораторна робота №2</button>
-            <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №3</button>
+            <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('3');">Лабораторна робота №3</button>
             <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №4</button>
             <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №5</button>
             <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №6</button>
@@ -50,5 +50,6 @@
 
     <@b.lab "1" />
     <@b.lab "2" />
+    <@b.lab "3" />
 
 </@c.page>

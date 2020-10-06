@@ -27,6 +27,12 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Order> myOrders;
+
+    @OneToMany(mappedBy = "driver", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Order> completeByMeOrder;
+
     public boolean isAdmin() {
         return roles.contains(Role.ADMIN);
     }
@@ -95,6 +101,22 @@ public class User implements UserDetails {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Set<Order> getMyOrders() {
+        return myOrders;
+    }
+
+    public void setMyOrders(Set<Order> myOrders) {
+        this.myOrders = myOrders;
+    }
+
+    public Set<Order> getCompleteByMeOrder() {
+        return completeByMeOrder;
+    }
+
+    public void setCompleteByMeOrder(Set<Order> completeByMeOrder) {
+        this.completeByMeOrder = completeByMeOrder;
     }
 
     @Override
