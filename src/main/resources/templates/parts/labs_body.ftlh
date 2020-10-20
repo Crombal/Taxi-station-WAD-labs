@@ -21,6 +21,12 @@
                 </@l3.lab3>
             </#if>
 
+            <#if number == "4">
+                <#import "labs/lab4.ftlh" as l4>
+                <@l4.lab4>
+                </@l4.lab4>
+            </#if>
+
         </div>
     </div>
 

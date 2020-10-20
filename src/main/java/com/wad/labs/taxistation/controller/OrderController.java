@@ -3,10 +3,8 @@ package com.wad.labs.taxistation.controller;
 import com.wad.labs.taxistation.controller.util.ControllerUtils;
 import com.wad.labs.taxistation.domain.Order;
 import com.wad.labs.taxistation.domain.User;
-import com.wad.labs.taxistation.repository.OrderRepository;
 import com.wad.labs.taxistation.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.util.Map;
-import java.util.Set;
 
 @Controller
 public class OrderController {
@@ -56,7 +53,7 @@ public class OrderController {
     }
 
     @GetMapping("/user-orders/{currentUserId}")
-    public String userMessages(
+    public String userOrders(
             @AuthenticationPrincipal User currentUser,
             @PathVariable Long currentUserId,
             Model model
@@ -66,5 +63,31 @@ public class OrderController {
         model.addAttribute("orders", orders);
 
         return "userOrders";
+    }
+
+    @GetMapping("/driver-orders")
+    public String driverOrders(
+            Model model
+    ) {
+        Iterable<Order> driverOrders = orderService.ordersListForDriver();
+
+        model.addAttribute("driverOrders", driverOrders);
+
+        return "driverOrders";
+    }
+
+    @PostMapping("/complete-order/{currentOrderId}")
+    public String completeOrder(
+            @AuthenticationPrincipal User currentDriver,
+            @PathVariable Long currentOrderId,
+            Model model
+    ) {
+        orderService.completeOrder(currentOrderId, currentDriver);
+
+        Iterable<Order> driverOrders = orderService.ordersListForDriver();
+
+        model.addAttribute("driverOrders", driverOrders);
+
+        return "driverOrders";
     }
 }

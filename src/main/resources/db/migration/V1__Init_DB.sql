@@ -6,7 +6,7 @@ create table ordr (
     to_str varchar(255) not null,
     author_id int8 not null,
     driver_id int8,
-    is_complete boolean,
+    complete boolean,
     creation_date varchar(255),
     primary key (id)
 );

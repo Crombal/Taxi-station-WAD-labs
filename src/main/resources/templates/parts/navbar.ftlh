@@ -28,7 +28,7 @@
 
             <#if user?? && name!="Guest" && isDriver>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user-messages">Актуальні замовлення</a>
+                    <a class="nav-link" href="/driver-orders">Актуальні замовлення</a>
                 </li>
             </#if>
 

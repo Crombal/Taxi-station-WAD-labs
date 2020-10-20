@@ -5,8 +5,6 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 @Entity
 @Table(name = "ordr")
@@ -34,7 +32,7 @@ public class Order {
     @Length(max = 255, message = "Too long (more than 255 symbols!")
     private String creationDate;
 
-    private boolean isComplete;
+    private boolean complete;
 
     public Order() {
     }
@@ -43,7 +41,7 @@ public class Order {
         this.fromStr = fromStr;
         this.toStr = toStr;
         this.author = author;
-        this.isComplete = false;
+        this.complete = false;
     }
 
     public String getAuthorName() {
@@ -95,11 +93,11 @@ public class Order {
     }
 
     public boolean isComplete() {
-        return isComplete;
+        return complete;
     }
 
     public void setComplete(boolean complete) {
-        isComplete = complete;
+        this.complete = complete;
     }
 
     public String getCreationDate() {

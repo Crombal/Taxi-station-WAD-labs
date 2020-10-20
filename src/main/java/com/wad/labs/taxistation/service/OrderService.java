@@ -3,12 +3,13 @@ package com.wad.labs.taxistation.service;
 import com.wad.labs.taxistation.domain.Order;
 import com.wad.labs.taxistation.domain.User;
 import com.wad.labs.taxistation.repository.OrderRepository;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Set;
+import java.util.Optional;
 
 @Service
 public class OrderService {
@@ -36,6 +37,23 @@ public class OrderService {
             return null;
         } else {
             return orderRepository.findAllByAuthor(currentUser);
+        }
+    }
+
+    public Iterable<Order> ordersListForDriver() {
+        return orderRepository.findAllByCompleteIsFalse();
+    }
+
+    public void completeOrder(Long currentOrderId, User currentDriver) {
+        Optional<Order> order = orderRepository.findById(currentOrderId);
+
+        if (order.isPresent()) {
+            Order completeOrder = order.get();
+
+            completeOrder.setComplete(true);
+            completeOrder.setDriver(currentDriver);
+
+            orderRepository.save(completeOrder);
         }
     }
 }
