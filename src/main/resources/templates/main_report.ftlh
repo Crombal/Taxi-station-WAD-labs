@@ -37,7 +37,7 @@
             <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('2');">Лабораторна робота №2</button>
             <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('3');">Лабораторна робота №3</button>
             <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('4');">Лабораторна робота №4</button>
-            <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №5</button>
+            <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('5');">Лабораторна робота №5</button>
             <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №6</button>
             <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №7</button>
             <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №8</button>
@@ -52,5 +52,6 @@
     <@b.lab "2" />
     <@b.lab "3" />
     <@b.lab "4" />
+    <@b.lab "5" />
 
 </@c.page>

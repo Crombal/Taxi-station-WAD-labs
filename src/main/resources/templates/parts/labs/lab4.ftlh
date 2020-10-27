@@ -23,11 +23,11 @@
             </button>
 
             <button type="button" class="btn btn-outline-danger" id="l4-arrays-pills-tab" data-toggle="tab"
-                    href="#l4-arrays-pills" role="tab" aria-controls="l4-arrays-pills">Arrays JavaScript
+                    href="#l4-arrays-pills" role="tab" aria-controls="l4-arrays-pills">Arrays JavaScript пункт 4
             </button>
 
             <button type="button" class="btn btn-outline-danger" id="l4-val-pills-tab" data-toggle="tab"
-                    href="#l4-val-pills" role="tab" aria-controls="l4-val-pills">Validation JavaScript
+                    href="#l4-val-pills" role="tab" aria-controls="l4-val-pills">Validation JavaScript пункт 6
             </button>
         </div>
     </div>
@@ -83,7 +83,7 @@
 
             <div class="tab-pane fade card border-danger text-danger text-center" id="l4-arrays-pills" role="tabpanel"
                  aria-labelledby="l4-arrays-pills-tab">
-                <div class="card-header">Arrays JavaScript</div>
+                <div class="card-header">Arrays JavaScript пункт 4</div>
                 <div class="card-body text-danger">
                     <img src="../../../static/img/arrays_js.png"/>
                 </div>
@@ -91,7 +91,7 @@
 
             <div class="tab-pane fade card border-danger text-danger text-center" id="l4-val-pills" role="tabpanel"
                  aria-labelledby="l4-val-pills-tab">
-                <div class="card-header">Validation JavaScript</div>
+                <div class="card-header">Validation JavaScript пункт 6</div>
                 <div class="card-body text-danger">
                     <img src="../../../static/img/val_js.png"/>
                 </div>

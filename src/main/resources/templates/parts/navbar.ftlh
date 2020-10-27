@@ -24,6 +24,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/user/profile">Мій профіль</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us">Про нас</a>
+                </li>
             </#if>
 
             <#if user?? && name!="Guest" && isDriver>
