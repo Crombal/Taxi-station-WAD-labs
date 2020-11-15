@@ -33,6 +33,12 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "driver", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Order> completeByMeOrder;
 
+    @OneToMany(mappedBy = "sender", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Message> sendMessages;
+
+    @OneToMany(mappedBy = "receiver", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Message> receivedMessages;
+
     public boolean isAdmin() {
         return roles.contains(Role.ADMIN);
     }
@@ -117,6 +123,22 @@ public class User implements UserDetails {
 
     public void setCompleteByMeOrder(Set<Order> completeByMeOrder) {
         this.completeByMeOrder = completeByMeOrder;
+    }
+
+    public Set<Message> getSendMessages() {
+        return sendMessages;
+    }
+
+    public void setSendMessages(Set<Message> sendMessages) {
+        this.sendMessages = sendMessages;
+    }
+
+    public Set<Message> getReceivedMessages() {
+        return receivedMessages;
+    }
+
+    public void setReceivedMessages(Set<Message> receivedMessages) {
+        this.receivedMessages = receivedMessages;
     }
 
     @Override

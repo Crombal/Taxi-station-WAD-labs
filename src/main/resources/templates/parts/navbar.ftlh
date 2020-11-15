@@ -22,7 +22,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/profile">Мій профіль</a>
+                    <a class="nav-link" href="/user-profile">Мій профіль</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/user-messages">Повідомлення</a>
                 </li>
 
                 <li class="nav-item">

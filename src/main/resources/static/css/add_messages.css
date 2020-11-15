@@ -1,0 +1,189 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#dd3243, #243b55) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+/* Accordion Customizations
+--------------------------------------------- */
+#accordion h3 {
+    text-transform: uppercase;
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Poiret One', cursive;
+}
+
+#accordion div {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+.accordion-body p {
+    padding: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Poiret One', cursive;
+}
+
+.accordion-body {
+    width: 100%;
+    padding: 20px 40px 40px;
+}
+
+.accordion-body h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.accordion-body .message-box {
+    position: relative;
+}
+
+.accordion-body .message-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.accordion-body .message-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.accordion-body .message-box input:focus ~ label,
+.accordion-body .message-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #ff4444;
+    font-size: 12px;
+}
+
+.accordion-body form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ff4444;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 5px;
+    letter-spacing: 4px;
+    float: right;
+}
+
+.accordion-body a:hover {
+    background: #ff4444;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff4444,
+    0 0 25px #ff4444,
+    0 0 50px #ff4444,
+    0 0 100px #ff4444;
+}
+
+.accordion-body a span {
+    position: absolute;
+    display: block;
+}
+
+.accordion-body a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff4444);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.accordion-body a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff4444);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.accordion-body a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff4444);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.accordion-body a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ff4444);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}

@@ -1,6 +1,6 @@
 package com.wad.labs.taxistation.domain;
 
-import com.wad.labs.taxistation.domain.util.OrderHelper;
+import com.wad.labs.taxistation.domain.util.NameHelper;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -45,11 +45,11 @@ public class Order {
     }
 
     public String getAuthorName() {
-        return OrderHelper.getUserName(author);
+        return NameHelper.getUserName(author);
     }
 
     public String getDriverName() {
-        return OrderHelper.getUserName(driver);
+        return NameHelper.getUserName(driver);
     }
 
     public Long getId() {

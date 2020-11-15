@@ -33,6 +33,12 @@
                 </@l5.lab5>
             </#if>
 
+            <#if number == "6">
+                <#import "labs/lab6.ftlh" as l6>
+                <@l6.lab6>
+                </@l6.lab6>
+            </#if>
+
         </div>
     </div>
 
