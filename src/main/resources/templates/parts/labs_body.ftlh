@@ -45,6 +45,12 @@
                 </@l7.lab7>
             </#if>
 
+            <#if number == "8">
+                <#import "labs/lab8.ftlh" as l8>
+                <@l8.lab8>
+                </@l8.lab8>
+            </#if>
+
         </div>
     </div>
 

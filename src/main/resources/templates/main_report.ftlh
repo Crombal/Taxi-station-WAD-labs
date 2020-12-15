@@ -40,8 +40,8 @@
             <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('5');">Лабораторна робота №5</button>
             <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('6');">Лабораторна робота №6</button>
             <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('7');">Лабораторна робота №7</button>
-            <button type="button" class="btn btn-outline-danger rounded-0">Лабораторна робота №8</button>
-            <button type="button" class="btn btn-outline-danger rounded-right">Лабораторна робота №9</button>
+            <button type="button" class="btn btn-outline-danger rounded-0" onclick="toggle_visibility('8');">Лабораторна робота №8</button>
+            <button type="button" class="btn btn-outline-danger rounded-right" onclick="toggle_visibility('6');">Лабораторна робота №9</button>
         </div>
         <div class="col">
             <a class="btn btn-outline-danger list-group-item border-danger rounded" href="/">Головна сторінка</a>
@@ -55,5 +55,7 @@
     <@b.lab "5" />
     <@b.lab "6" />
     <@b.lab "7" />
+    <@b.lab "8" />
+    <@b.lab "6" />
 
 </@c.page>
